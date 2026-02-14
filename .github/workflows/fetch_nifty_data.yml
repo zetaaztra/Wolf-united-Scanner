@@ -31,4 +31,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data/nifty500_ohlcv.csv data/metadata.json
-          git diff --quiet && git diff --staged --quiet || (git pull --rebase origin main && git commit -m "Automated Data Update: $(date +'%Y-%m-%d %H:%M')" && git push)
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Automated Data Update: $(date +'%Y-%m-%d %H:%M')"
+            git pull --rebase origin main
+            git push
+          fi
