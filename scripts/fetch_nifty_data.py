@@ -82,8 +82,8 @@ def main():
     df.to_csv(csv_path, index=False)
     print(f"[OK] Saved CSV: {csv_path}")
     
-    # Save Metadata
-    ist_now = datetime.datetime.now(datetime.UTC) + datetime.timedelta(hours=5, minutes=30)
+    # Create metadata
+    ist_now = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=5, minutes=30)
     metadata = {
         "last_updated": ist_now.strftime("%Y-%m-%d %H:%M:%S"),
         "timezone": "IST",
