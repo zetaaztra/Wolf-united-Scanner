@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-01 16:26:44",
+  "last_updated": "2026-04-02 12:21:16",
   "timezone": "IST",
   "total_stocks": 500,
   "date_range": {
-    "start": "2025-09-09",
-    "end": "2026-04-01"
+    "start": "2025-09-10",
+    "end": "2026-04-02"
   }
 }
